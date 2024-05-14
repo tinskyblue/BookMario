@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bookmario.mapper.CartMapper">
+
+	<insert id="create" useGeneratedKeys="true" keyProperty="cartID">
+		insert into carts (userID, status) values (#{userID}, #{status})
+	</insert>
+
+	<insert id="add" useGeneratedKeys="true" keyProperty="itemID">
+		insert into items (cartID, bookID, amount) values (#{cartID}, #{bookID}, #{amount})
+	</insert>
+
+	<select id="getItems">
+		select * from items where cartID = #{cartID}
+	</select>
+
+	<update id="order">
+		update carts set status = 1 where cartID = #{cartID}
+	</update>
+	
+	<delete id="delete">
+		delete from items where itemID = #{itemID}
+		<!-- delete from items where bookID = #{bookID} -->
+	</delete>
+
+</mapper>

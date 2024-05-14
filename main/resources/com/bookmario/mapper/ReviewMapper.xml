@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bookmario.mapper.ReviewMapper">
+
+	<insert id="insert">
+		insert into Review (rno, bookID, review, reviewer)
+		values (nextval('seq_review'), #{bookID}, #{review}, #{reviewer})
+	</insert>
+	
+	<select id="read" resultType="com.bookmario.domain.ReviewVO">
+		select * from Review where rno = #{rno}
+	</select>
+	
+	<delete id="delete">
+		delete from review where rno = #{rno}
+	</delete>
+	
+	<update id="update">
+		update Review set Review = #{review}, updateDate = Now() where rno = #{rno}
+	</update>
+</mapper>

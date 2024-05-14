@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+*,
+*::before,
+*::after {
+	padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: var(--bs-link-hover-color);
+  text-decoration: underline !important;
+}
+
+.tit {
+	color: #333 !important;
+  	font-size: 1.25rem;
+}
+
+.conA h1 {
+	font-size: 25px;
+	text-align: center;
+	margin-top: 80px;
+	font-weight: bold;
+}
+
+.conA p {
+	font-size: 14px;
+	opacity: 0.8;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.conA hr {
+	width: 150px;
+	margin: 0.5em auto;
+	opacity: 1;
+}
+
+.conB {
+	width: auto !important;
+}
+
+.h-100 > a:hover {
+    opacity: 0.8;
+    border: 1px solid #4e6f7e;
+}
+
+.conB .photo {
+	width: 172px; height: 276px;
+    background-size: cover;
+    background-position: center;
+}
