@@ -1,4 +1,5 @@
-# Spring Project 온라인 서점 BookMario
+# Spring Project 
+온라인 서점 BookMario
 
 ## 프로젝트 계기
 + 본 repository는 웹 개발 학습을 위해 클론코딩하였습니다.
