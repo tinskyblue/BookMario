@@ -40,7 +40,7 @@
 ## UI
 
 ### 메인페이지
-![메인 페이지](https://github.com/user-attachments/assets/68bfb322-00cd-4aa6-96f3-d32a290dfb51)
+![Uploading 메인페이지.png…]()
 <hr/>
 
 ### 도서 리스트
