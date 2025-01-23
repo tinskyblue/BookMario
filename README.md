@@ -47,24 +47,12 @@
 ![도서 리스트](https://github.com/user-attachments/assets/2f8662e6-c831-47e3-a3de-ec3f9420d7b2)
 <hr/>
 
-### 회원 가입
-![회원가입](https://github.com/user-attachments/assets/ca9798c3-ae59-4b6e-ad7a-4a6daa49af54)
+### 도서 상세보기
+![도서 상세보기](https://github.com/user-attachments/assets/9351dd00-c649-41b4-a9a1-990ac109617a)
 <hr/>
-
-### 로그인
-![로그인](https://github.com/user-attachments/assets/95b77c55-6aa5-4240-a0e0-3525659c83f0)
-<hr/>
-
-<!-- ### 회원 수정 -->
-
-<!-- ### 관리자 페이지 -->
 
 ### 도서 등록
 ![도서등록](https://github.com/user-attachments/assets/ec44ebfd-635f-48fe-9cfd-5914552ffb60)
-<hr/>
-
-### 도서 상세보기
-![도서 상세보기](https://github.com/user-attachments/assets/9351dd00-c649-41b4-a9a1-990ac109617a)
 <hr/>
 
 ### 도서 수정하기
@@ -78,3 +66,13 @@
 ### 주문정보
 ![주문내역](https://github.com/user-attachments/assets/2ca6635a-b1ea-4a9b-a040-d4d41de0fa56)
 
+### 회원 가입
+![회원가입](https://github.com/user-attachments/assets/ca9798c3-ae59-4b6e-ad7a-4a6daa49af54)
+<hr/>
+
+### 로그인
+![로그인](https://github.com/user-attachments/assets/95b77c55-6aa5-4240-a0e0-3525659c83f0)
+
+<!-- ### 회원 수정 -->
+
+<!-- ### 관리자 페이지 -->
