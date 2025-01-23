@@ -65,6 +65,7 @@
 
 ### 주문정보
 ![주문내역](https://github.com/user-attachments/assets/2ca6635a-b1ea-4a9b-a040-d4d41de0fa56)
+<hr/>
 
 ### 회원 가입
 ![회원가입](https://github.com/user-attachments/assets/ca9798c3-ae59-4b6e-ad7a-4a6daa49af54)
