@@ -37,6 +37,8 @@
 + 주문정보
 + 페이징 처리
 
+<hr/>
+
 ### [ 회원 관리 ]  
 ![회원가입](https://github.com/user-attachments/assets/7cfb1314-237c-46cd-aca1-41d5e724aebe)
 ![로그인50](https://github.com/user-attachments/assets/73e23d2a-7333-445b-8589-d19a37cae71f)
@@ -88,7 +90,13 @@
      + **MemberMapper**   
       : [MemberMapper.java](./bookmario/src/main/java/com/bookmario/mapper/MemberMapper.java) - [MemberMapper.xml](./bookmario/src/main/resources/com/bookmario/mapper/MemberMapper.xml)의 구조를 가집니다.
 
+<hr/>
+
 ### [ 상품 관리 ]
+![도서 상세보기75](https://github.com/user-attachments/assets/f461d0d9-ef3f-4e24-881e-574947195818)
+![리뷰50](https://github.com/user-attachments/assets/93a4683c-2a46-499e-a0d9-42c30593c388)
+![도서등록50](https://github.com/user-attachments/assets/15276f22-7037-46bd-b50b-eb4bcd5a54a0)
+![도서 수정50](https://github.com/user-attachments/assets/82340aaa-8087-471a-a60e-311f1256b84b)
 
 - [X] **상품의 CRUD**
 
@@ -119,12 +127,16 @@
     + **[ReviewMapper]**   
        :[ReviewMapper.java](./bookmario/src/main/java/com/bookmario/mapper/ReviewMapper.java) - [ReviewMapper.xml](./bookmario/src/main/resources/com/bookmario/mapper/ReviewMapper.xml)의 구조를 가집니다.
 
+<hr/>
+
 ### [ 구매 절차 ]
+![장바구니50](https://github.com/user-attachments/assets/e134edf9-3479-44a3-b046-0da29537b5b1)
+![주문내역50](https://github.com/user-attachments/assets/5ee608c7-2e8c-4d3d-add4-481085ae2898)
 
 - [X] **장바구니**
 
    **[ 기능 설명 ]**
-    : 회원은 원하는 상품의 수량을 지정하여 장바구니에 저장할 수 있습니다.
+    : 회원은 원하는 상품의 수량을 지정하여 장바구니에 저장할 수 있습니다.   
     : 장바구니에서 담았던 상품을 삭제할 수도 있습니다.
 
    **[ 상세 구조 ]**
@@ -144,10 +156,10 @@
    **[ 상세 구조 ]**
     + **[OrdersController](./bookmario/src/main/java/com/bookmario/controller/OrdersController.java)**
 
-    + **OrderService**
+    + **OrderService**   
        : [OrderService](./bookmario/src/main/java/com/bookmario/service/OrderService.java) - [OrderServiceImpl](./bookmario/src/main/java/com/bookmario/service/OrderServiceImpl.java)의 구조를 가집니다.
 
-    + **OrderMapper**
+    + **OrderMapper**   
        : [OrderMapper.java](./bookmario/src/main/java/com/bookmario/mapper/OrderMapper.java) - [OrderMapper.xml](./bookmario/src/main/resources/com/bookmario/mapper/OrderMapper.xml)의 구조를 가집니다.
 
 ## UI
@@ -158,26 +170,6 @@
 
 ### 도서 리스트
 ![도서 리스트](https://github.com/user-attachments/assets/2f8662e6-c831-47e3-a3de-ec3f9420d7b2)
-<hr/>
-
-### 도서 상세보기
-![도서 상세보기](https://github.com/user-attachments/assets/9351dd00-c649-41b4-a9a1-990ac109617a)
-<hr/>
-
-### 도서 등록
-![도서등록](https://github.com/user-attachments/assets/ec44ebfd-635f-48fe-9cfd-5914552ffb60)
-<hr/>
-
-### 도서 수정하기
-![도서 수정](https://github.com/user-attachments/assets/5532d64c-0488-4c7b-a076-c6efbcb0fa89)
-<hr/>
-
-### 장바구니
-![장바구니](https://github.com/user-attachments/assets/51ce2993-3bb8-4c2d-9cd3-9f2b0b928e2e)
-<hr/>
-
-### 주문정보
-![주문내역](https://github.com/user-attachments/assets/2ca6635a-b1ea-4a9b-a040-d4d41de0fa56)
 <hr/>
 
 <!-- ### 회원 수정 -->
