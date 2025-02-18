@@ -94,7 +94,7 @@
 
 ### [ 상품 관리 ]
 ![도서 상세보기75](https://github.com/user-attachments/assets/f461d0d9-ef3f-4e24-881e-574947195818)
-![리뷰50](https://github.com/user-attachments/assets/93a4683c-2a46-499e-a0d9-42c30593c388)
+![리뷰50](https://github.com/user-attachments/assets/93a4683c-2a46-499e-a0d9-42c30593c388)   
 ![도서등록50](https://github.com/user-attachments/assets/15276f22-7037-46bd-b50b-eb4bcd5a54a0)
 ![도서 수정50](https://github.com/user-attachments/assets/82340aaa-8087-471a-a60e-311f1256b84b)
 
