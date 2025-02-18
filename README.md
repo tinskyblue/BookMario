@@ -55,7 +55,7 @@
      + **MemberMapper**  
        : [MemberMapper.java](./bookmario/src/main/java/com/bookmario/mapper/MemberMapper.java) - [MemberMapper.xml](./bookmario/src/main/resources/com/bookmario/mapper/MemberMapper.xml)의 구조를 가집니다.
 
-- [X] **[ 로그인 ]**  
+- [X] **로그인**  
 
     **[ 기능 설명 ]**  
       : Spring Security를 사용하여 로그인을 할 수 있습니다.  
@@ -64,7 +64,7 @@
     **[ 상세 구조 ]**  
      + **AuthenticaionProvider**    
        : 실제 인증 작업을 진행합니다. 사용자가 인증 요청한 정보와 DB의 사용자 정보가 일치하는지를 확인합니다.  
-
+      
      + **PasswordEncoder**   
        : 패스워드를 암호화합니다.   
        : 암호화되지 않은 실제 패스워드를 저장하는 일은 위험하기 때문에 암호화된 패스워드로 저장하고, 사용자가 패스워드를 입력하면 이를 암호화해서 저장된 패스워드와 비교합니다.
@@ -83,10 +83,72 @@
      + **security-context.xml**   
       : [security-context.xml](./bookmario/src/main/webapp/WEB-INF/spring/security-context.xml)은 Spring Security와 관련된 설정을 담고 있습니다.   
       : AuthenticationSuccessHandler를 상속받아 [로그인 성공 로직](./bookmario/src/main/java/com/bookmario/security/CustomLoginSuccessHandler.java)을 처리합니다.   
-      <!-- : AuthenticationFailureHandler를 상속받아 [로그인 실패 로직]()을 처리합니다. 로그인의 실패 원인을 알려줍니다. -->  
+      <!-- : AuthenticationFailureHandler를 상속받아 [로그인 실패 로직]()을 처리합니다. 로그인의 실패 원인을 알려줍니다. -->
       : AccessDeniedHandler를 상속받아 권한이 없는 페이지에 대하여 [접근 제한 로직](./bookmario/src/main/java/com/bookmario/security/CustomAccessDeniedHandler.java)을 처리합니다.    
      + **MemberMapper**   
       : [MemberMapper.java](./bookmario/src/main/java/com/bookmario/mapper/MemberMapper.java) - [MemberMapper.xml](./bookmario/src/main/resources/com/bookmario/mapper/MemberMapper.xml)의 구조를 가집니다.
+
+### [ 상품 관리 ]
+
+- [X] **상품의 CRUD**
+
+   **[ 기능 설명 ]**   
+     : 관리자만이 게시물을 등록, 수정, 삭제할 수 있으며, 누구나 조회할 수 있습니다.   
+     : 상품은 도서 분류 **카테고리**를 지정하거나 **검색**을 통하여 조회할 수 있습니다.
+
+   **[ 상세 구조 ]**
+    + **[BookController](./bookmario/src/main/java/com/bookmario/controller/BookController.java)**   
+      : 이미지는 C:\Bookmario\resources\img 폴더에 저장합니다.   
+   
+    + **BookService**   
+       : [BookService](./bookmario/src/main/java/com/bookmario/service/BookService.java) - [BookServiceImpl](./bookmario/src/main/java/com/bookmario/service/BookServiceImpl.java)의 구조를 가집니다.
+
+    + **BookMapper**   
+       : [BookMapper.java](./bookmario/src/main/java/com/bookmario/mapper/BookMapper.java) - [BookMapper.xml](./bookmario/src/main/resources/com/bookmario/mapper/BookMapper.xml)의 구조를 가집니다.
+
+- [X] **리뷰 CRUD**
+
+   **[ 기능 설명 ]**   
+    : 회원은 리뷰를 등록, 수정, 삭제할 수 있습니다   
+    : 리뷰에 대한 조회는 제품의 리뷰 탭 에서 누구나 가능합니다.
+
+   **[ 상세 구조 ]**   
+    + **[ReviewController](./bookmario/src/main/java/com/bookmario/controller/ReviewController.java)**   
+       : json를 반환하는 RestController를 사용하였고, View단에서 JQuery의 AJAX로 데이터를 주고 받습니다.
+
+    + **[ReviewMapper]**   
+       :[ReviewMapper.java](./bookmario/src/main/java/com/bookmario/mapper/ReviewMapper.java) - [ReviewMapper.xml](./bookmario/src/main/resources/com/bookmario/mapper/ReviewMapper.xml)의 구조를 가집니다.
+
+### [ 구매 절차 ]
+
+- [X] **장바구니**
+
+   **[ 기능 설명 ]**
+    : 회원은 원하는 상품의 수량을 지정하여 장바구니에 저장할 수 있습니다.
+    : 장바구니에서 담았던 상품을 삭제할 수도 있습니다.
+
+   **[ 상세 구조 ]**
+    + **[CartsController](./bookmario/src/main/java/com/bookmario/controller/CartsController.java)**
+      
+    + **CartService**   
+       : [CartService.java](./bookmario/src/main/java/com/bookmario/service/CartService.java) - [CartService.xml](./bookmario/src/main/java/com/bookmario/service/CartServiceImpl.java)의 구조를 가집니다.
+
+    + **CartMapper**   
+       : [CartMapper.java](./bookmario/src/main/java/com/bookmario/mapper/CartMapper.java) - [CartMapper.xml](./bookmario/src/main/resources/com/bookmario/mapper/CartMapper.xml)의 구조를 가집니다.
+
+- [X] **구매**
+
+   **[ 기능 설명 ]**
+    : 장바구니에 있는 여러 상품들을 함께 주문할 수 있습니다.
+
+   **[ 상세 구조 ]**
+    + **[OrdersController](./bookmario/src/main/java/com/bookmario/controller/OrdersController.java)**
+
+    + **OrderService**
+       : [OrderService](./bookmario/src/main/java/com/bookmario/service/OrderService.java) - [OrderServiceImpl](./bookmario/src/main/java/com/bookmario/service/OrderServiceImpl.java)의 구조를 가집니다.
+
+    + **OrderMapper**
+       : [OrderMapper.java](./bookmario/src/main/java/com/bookmario/mapper/OrderMapper.java) - [OrderMapper.xml](./bookmario/src/main/resources/com/bookmario/mapper/OrderMapper.xml)의 구조를 가집니다.
 
 ## UI
 
