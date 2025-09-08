@@ -94,10 +94,10 @@
 <hr/>
 
 ### [ 상품 관리 ]
-![도서 상세보기75](https://github.com/user-attachments/assets/f461d0d9-ef3f-4e24-881e-574947195818)
-![리뷰50](https://github.com/user-attachments/assets/93a4683c-2a46-499e-a0d9-42c30593c388)   
-![도서등록50](https://github.com/user-attachments/assets/15276f22-7037-46bd-b50b-eb4bcd5a54a0)
-![도서 수정50](https://github.com/user-attachments/assets/82340aaa-8087-471a-a60e-311f1256b84b)
+![도서 상세보기75](https://github.com/user-attachments/assets/a983a1f9-ca64-4781-bea9-52338ead9736)
+![리뷰](https://github.com/user-attachments/assets/773ed9ce-3b04-4ebf-af3d-852ec78b00eb)
+![도서등록](https://github.com/user-attachments/assets/15276f22-7037-46bd-b50b-eb4bcd5a54a0)
+![도서 수정](https://github.com/user-attachments/assets/82340aaa-8087-471a-a60e-311f1256b84b)
 
 - [X] **상품의 CRUD**
 
@@ -166,11 +166,11 @@
 ## UI
 
 ### 메인페이지
-![메인페이지](https://github.com/user-attachments/assets/07e01112-c869-4a24-8232-76c8b0b83b0f)
+![메인페이지](https://github.com/user-attachments/assets/2037476a-ebf7-44d6-bf18-8597265d80a9)
 <hr/>
 
 ### 도서 리스트
-![도서 리스트](https://github.com/user-attachments/assets/2f8662e6-c831-47e3-a3de-ec3f9420d7b2)
+![도서 리스트](https://github.com/user-attachments/assets/23fdb362-6755-4d1b-be2d-251e327a1678)
 <hr/>
 
 <!-- ### 회원 수정 -->
