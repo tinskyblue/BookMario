@@ -94,7 +94,7 @@
 <hr/>
 
 ### [ 상품 관리 ]
-![도서 상세보기75](https://github.com/user-attachments/assets/a983a1f9-ca64-4781-bea9-52338ead9736)<br>
+
 ![리뷰](https://github.com/user-attachments/assets/773ed9ce-3b04-4ebf-af3d-852ec78b00eb)<br>
 ![도서등록](https://github.com/user-attachments/assets/15276f22-7037-46bd-b50b-eb4bcd5a54a0)
 ![도서 수정](https://github.com/user-attachments/assets/82340aaa-8087-471a-a60e-311f1256b84b)
@@ -173,6 +173,11 @@
 ![도서 리스트](https://github.com/user-attachments/assets/eb61607b-807a-4ff1-8e2b-2b11525d1d9a)
 <hr/>
 
+### 상품 상세보기
+![도서 상세보기](https://github.com/user-attachments/assets/1fd7111c-6111-4410-abe4-de506ee96307)<br>
+<hr/>
+
 <!-- ### 회원 수정 -->
+
 
 <!-- ### 관리자 페이지 -->
