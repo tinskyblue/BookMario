@@ -115,12 +115,10 @@ public class CartsController {
             item.setAmount(amount); // 수량 변경
             cartService.updateItemAmount(item); // 수량 업데이트
             log.info("아이템 수량이 변경되었습니다: " + item);
-
             // 성공 메시지 추가
             redirectAttributes.addFlashAttribute("successMessage", "아이템 수량이 변경되었습니다.");
         } else {
             log.warn("아이템을 찾을 수 없거나 권한이 없는 요청: " + itemID);
-
             // 오류 메시지 추가
             redirectAttributes.addFlashAttribute("errorMessage", "아이템 수량 수정에 실패했습니다.");
         }

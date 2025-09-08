@@ -33,7 +33,7 @@
 	</sql>
 	
 	<!-- 페이징 처리 -->
-	<!-- 현제 페이지에서 1을 뺀 숫자에 보여줄 페이지 개수를 곱하면 2페이지 -1은 1페이지 x 16개 17번 상품부터 보여준다(0번부터 시작) -->
+	<!-- 현제 페이지에서 1을 뺀 숫자에 보여줄 페이지 개수를 곱함 2페이지 -1은 1페이지 x 16개 17번 상품부터 보여준다(0번부터 시작) -->
 	<select id="getListWithPaging" resultType="com.bookmario.domain.BookVO">
 	<![CDATA[
 		select bookID, image, title, category

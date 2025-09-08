@@ -123,7 +123,7 @@
 			            								<label>Reviewer</label>
 			            								<input class="form-control" name='reviewer' value='reviewer'>
 			            							</div>
-			            							<div class="form-group">
+			            							<div class="form-group" style="display:none;">
 			            								<label>Review Date</label>
 			            								<input class="form-control" name='reviewDate' value=''>
 			            							</div>
@@ -154,12 +154,7 @@
 			            		
 			            		<!-- panel footer -->
 			            		<div class="panel-footer text-center">
-								    <ul class="pagination justify-content-center">
-								        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-								        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-								        <li class="page-item"><a class="page-link" href="#">2</a></li>
-								        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-								    </ul>
+								    <ul class="pagination justify-content-center"></ul>
 								</div>
 			            	</div>
 			            </div>
@@ -241,7 +236,7 @@
 				     	// 리뷰 추가 버튼 클릭 시 모달 초기화
 				        $("#addReviewBtn").on("click", function(e){
 				        	modal.find("input").val("");
-				        	modalInputReviewDate.closest("div").hide();
+				        	//modalInputReviewDate.closest("div").hide();
 				        	modal.find("button[id !='modalCloseBtn']").hide();
 				        	
 				        	modalRegisterBtn.show();
@@ -312,6 +307,12 @@
 				     	var reviewPageFooter = $(".panel-footer");
 		
 				     	function showReviewPage(reviewCnt) {
+				     		// 리뷰가 없을 경우 페이징 숨김
+				     	    if (reviewCnt === 0) {
+				     	        reviewPageFooter.html(""); // footer 비우기
+				     	        return;
+				     	    }
+				     		
 				     	    var endNum = Math.ceil(pageNum / 10.0) * 10;
 				     	    var startNum = endNum - 9;
 		
