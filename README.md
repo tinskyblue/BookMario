@@ -23,15 +23,12 @@
 + 카테고리 / 검색 기능
 + 장바구니 / 주문 및 배송상태 추적까지 구현된 상태입니다.
 
-## ⚙ 개발환경
-+ Java 8
-+ Spring Framework 5.2.25
-+ PostgreSQL 16.2
-<br>
+## ⚙ 사용기술
++	Frontend: JSP, Jquery, JavaScript
++	Backend: Spring Framework (Spring Security), MyBatis
++	Database: PostgreSQL
++	Server: Apache Tomcat 9.0
 
-## 📋 Library
-+ Mybatis 3.5.13
-+ Spring Securit 5.2.15
 <br>
 
 ## ERD
