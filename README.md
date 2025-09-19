@@ -1,3 +1,5 @@
+![bookmario_logo1 (1)](https://github.com/user-attachments/assets/727bbc78-f04c-4f0f-8f15-c9fe721cde32)
+
 # Spring을 활용한 인터넷 서점 개발
 > Spring Framework를 사용한 쇼핑몰 웹 프로젝트입니다.
 
