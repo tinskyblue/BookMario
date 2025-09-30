@@ -147,8 +147,8 @@
 
 ### [ 구매 절차 ]
 
-<img width="800" height="400" alt="장바구니" src="https://github.com/user-attachments/assets/ed98185f-eba4-47d0-b28b-d781fa405389" />
-<img width="800" height="400" alt="주문 내역" src="https://github.com/user-attachments/assets/95d6e924-240d-4e27-ba9f-a770b02093a3" />
+<img width="800" height="500" alt="장바구니" src="https://github.com/user-attachments/assets/ed98185f-eba4-47d0-b28b-d781fa405389" />
+<img width="800" height="500" alt="주문 내역" src="https://github.com/user-attachments/assets/95d6e924-240d-4e27-ba9f-a770b02093a3" />
 
 - [X] **장바구니**
 
