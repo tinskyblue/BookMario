@@ -1,4 +1,4 @@
-![bookmario_logo1 (1)](https://github.com/user-attachments/assets/727bbc78-f04c-4f0f-8f15-c9fe721cde32)
+<div align="center"><img width="300" height="300" alt="BookMario logo" src="https://github.com/user-attachments/assets/8a5478c3-c5e3-4197-888b-ca7a3049814a" /></div>
 
 # Spring을 활용한 인터넷 서점 개발
 > Spring Freamwork, JSP, JQuery등의 정부 표준 프레임 워크를 적극 활용한 전통적인 MVC패턴의 Spring Web app 입니다.
@@ -32,7 +32,7 @@
 <br>
 
 ## ERD
-![image](https://github.com/user-attachments/assets/5be030f3-6a73-4426-b17c-de8991d6a682)
+<div align="center"><img width="1085" height="605" alt="ERD" src="https://github.com/user-attachments/assets/aed9aad7-ec06-40aa-8288-1424ba1bd232" /></div>
 
 <br>
 
@@ -52,9 +52,10 @@
 
 <hr/>
 
-### [ 회원 관리 ]  
-![회원가입](https://github.com/user-attachments/assets/7cfb1314-237c-46cd-aca1-41d5e724aebe)
-![로그인50](https://github.com/user-attachments/assets/73e23d2a-7333-445b-8589-d19a37cae71f)
+### [ 회원 관리 ]
+
+<img width="300" height="600" alt="회원가입" src="https://github.com/user-attachments/assets/f4de1701-b693-4206-a31f-2079dc0f5d9e" />
+<img width="600" height="300" alt="로그인" src="https://github.com/user-attachments/assets/c9fa1231-ca5b-49aa-a182-bb9fb8be32a2" />
 
 - [X] **회원 가입**
 
@@ -107,9 +108,11 @@
 
 ### [ 상품 관리 ]
 
-![리뷰](https://github.com/user-attachments/assets/773ed9ce-3b04-4ebf-af3d-852ec78b00eb)<br>
-![도서등록](https://github.com/user-attachments/assets/15276f22-7037-46bd-b50b-eb4bcd5a54a0)
-![도서 수정](https://github.com/user-attachments/assets/82340aaa-8087-471a-a60e-311f1256b84b)
+<img width="300" height="600" alt="도서 등록" src="https://github.com/user-attachments/assets/a54b942d-acf1-4741-a4fe-37af68bebb2c" />
+<img width="300" height="600" alt="도서 수정" src="https://github.com/user-attachments/assets/de5aa02a-4237-4301-b013-b774462d639b" />
+<img width="600" height="313" alt="리뷰" src="https://github.com/user-attachments/assets/0b23a25a-422e-4246-918f-fbde594fadaf" />
+<img width="502" height="300" alt="리뷰모달" src="https://github.com/user-attachments/assets/6b4291be-3937-4e24-9c17-386b4bad4e1c" />
+
 
 - [X] **상품의 CRUD**
 
@@ -143,8 +146,9 @@
 <hr/>
 
 ### [ 구매 절차 ]
-![장바구니50](https://github.com/user-attachments/assets/e134edf9-3479-44a3-b046-0da29537b5b1)
-![주문내역50](https://github.com/user-attachments/assets/5ee608c7-2e8c-4d3d-add4-481085ae2898)
+
+<img width="600" height="300" alt="장바구니" src="https://github.com/user-attachments/assets/ed98185f-eba4-47d0-b28b-d781fa405389" />
+<img width="600" height="300" alt="주문 내역" src="https://github.com/user-attachments/assets/95d6e924-240d-4e27-ba9f-a770b02093a3" />
 
 - [X] **장바구니**
 
@@ -177,16 +181,16 @@
 
 ## UI
 
-### 메인페이지
-![메인페이지](https://github.com/user-attachments/assets/70c682af-ef96-4f3d-893e-c9b801b29e15)
+### [메인페이지]
+<img width="600" height="1000" alt="메인 페이지" src="https://github.com/user-attachments/assets/c6357c3d-2260-432d-afa2-6c45d0d90a9e" />
 <hr/>
 
-### 도서 리스트
-![도서 리스트](https://github.com/user-attachments/assets/eb61607b-807a-4ff1-8e2b-2b11525d1d9a)
+### [도서 리스트]
+<img width="600" height="600" alt="도서 리스트" src="https://github.com/user-attachments/assets/cdef4a1b-691e-4b81-a5dc-cf8336e71683" />
 <hr/>
 
-### 상품 상세보기
-![도서 상세보기](https://github.com/user-attachments/assets/1fd7111c-6111-4410-abe4-de506ee96307)<br>
+### [상품 상세보기]
+<img width="600" height="600" alt="상품 상세보기" src="https://github.com/user-attachments/assets/59d9240c-3a5c-4ab6-bc66-7592b86abf8c" /><br>
 <hr/>
 
 <!-- ### 회원 수정 -->
