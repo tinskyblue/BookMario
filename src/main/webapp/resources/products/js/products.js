@@ -2,8 +2,10 @@ $(document).ready(function() {
 
 	//검색
 	var searchForm = $("#searchForm");
+	
 	$("#searchForm button").on("click", function(e){
 		var word = $.trim(searchForm.find("input[name='keyword']").val());
+		
 		if(!word || word==""){
 			alert("키워드를 입력하세요");
 			return false;
@@ -17,6 +19,7 @@ $(document).ready(function() {
 
 	// 페이징 처리
 	var actionForm = $("#actionForm");
+	
 	$(".pagination a").on("click", function(e){
 		e.preventDefault();
 		console.log('click');
@@ -29,8 +32,8 @@ $(document).ready(function() {
 		e.preventDefault();
 		
 		var word = $.trim(searchForm.find("input[name='keyword']").val());
-		actionForm.find("input[name='keyword']").val(word);
 		
+		actionForm.find("input[name='keyword']").val(word);
 		actionForm.find("input[name='pageNum']").val("1");
 		actionForm.find("input[name='type']").val("C");
 		actionForm.find("input[name='category']").val($(this).attr("href"));

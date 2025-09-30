@@ -63,7 +63,7 @@ public class BookController {
 	public String edit(@PathVariable Long bookID, Model model) {
 		log.info("get edit");
 		BookVO book = bookService.get(bookID);
-		model.addAttribute("bookVO", book);
+		model.addAttribute("book", book);
 		return "books/item/edit";
 	}
 

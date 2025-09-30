@@ -98,12 +98,12 @@
 							<div class="col-sm-3">
 								<select name="category" class="form-select" required>
 			          				<option value = "" selected disabled hidden>선택</option>
-			          				<option value = "health" ${bookVO.category == 'health' ? 'selected' : ''}>건강</option>
-			          				<option value = "hobby" ${bookVO.category == 'hobby' ? 'selected' : ''}>취미</option>
-			         				<option value = "management" ${bookVO.category == 'management' ? 'selected' : ''}>경영</option>
-			         				<option value = "language" ${bookVO.category == 'language' ? 'selected' : ''}>외국어</option>
-			         				<option value = "development" ${bookVO.category == 'development' ? 'selected' : ''}>자기개발</option>
-			         				<option value = "cooking" ${bookVO.category == 'cooking' ? 'selected' : ''}>요리</option>
+			          				<option value = "health" ${book.category == 'health' ? 'selected' : ''}>건강</option>
+			          				<option value = "hobby" ${book.category == 'hobby' ? 'selected' : ''}>취미</option>
+			         				<option value = "management" ${book.category == 'management' ? 'selected' : ''}>경영</option>
+			         				<option value = "language" ${book.category == 'language' ? 'selected' : ''}>외국어</option>
+			         				<option value = "development" ${book.category == 'development' ? 'selected' : ''}>자기개발</option>
+			         				<option value = "cooking" ${book.category == 'cooking' ? 'selected' : ''}>요리</option>
 			       				</select>
 			       				<div class="invalid-feedback">분류를 확인해주세요.</div>
 							</div>

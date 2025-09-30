@@ -2,13 +2,9 @@ package com.bookmario.domain;
 
 import org.springframework.web.util.UriComponentsBuilder;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
 
-@Getter
-@Setter
-@ToString
+@Data
 public class Criteria {
 	// Criteria : 검색기준
 	

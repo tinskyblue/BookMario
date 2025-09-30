@@ -3,6 +3,7 @@ package com.bookmario.controller;
 import java.security.Principal;
 import java.util.List;
 
+import org.apache.ibatis.annotations.Delete;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -126,7 +127,7 @@ public class CartsController {
         return "redirect:/carts"; // 장바구니 페이지로 리다이렉트
     }
 	
-	@GetMapping("/delete/{itemID}")
+	@Delete("/{itemID}")
 	public String delete(@PathVariable Long itemID) {
 		log.info(itemID);
 		cartService.delete(itemID);

@@ -212,13 +212,9 @@
 				                    str += "<small class='pull-right text-muted ms-2'>" + reviewService.displayTime(list[i].reviewDate) + "</small></div>";
 				                    str += "<p>" + list[i].review + "</p></div></li>";
 				                }
-				                
-				                reviewUL.html(str);
-				                // 페이징 출력
-				            	for (var i = 0, len = list.length || 0; i < len; i++) {
-				            	
-				            	}
 				            	reviewUL.html(str);
+				                
+				                // 페이징 출력
 				            	showReviewPage(reviewCnt);
 				            }); //end function
 				        } //end showList
@@ -316,7 +312,7 @@
 				     	    var endNum = Math.ceil(pageNum / 10.0) * 10;
 				     	    var startNum = endNum - 9;
 		
-				     	    var prev = startNum != 1;
+				     	    var prev = startNum != 1; // 이전 버튼 표시 여부
 				     	    var next = false;
 		
 				     	    if (endNum * 10 >= reviewCnt) {
