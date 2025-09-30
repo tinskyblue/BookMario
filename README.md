@@ -48,6 +48,7 @@
 + 리뷰 CRUD
 + 장바구니 및 구매
 + 주문정보
++ 검색 기능
 + 페이징 처리
 
 <hr/>
@@ -55,7 +56,7 @@
 ### [ 회원 관리 ]
 
 <img width="300" height="600" alt="회원가입" src="https://github.com/user-attachments/assets/f4de1701-b693-4206-a31f-2079dc0f5d9e" />
-<img width="600" height="300" alt="로그인" src="https://github.com/user-attachments/assets/c9fa1231-ca5b-49aa-a182-bb9fb8be32a2" />
+<img width="500" height="300" alt="로그인" src="https://github.com/user-attachments/assets/c9fa1231-ca5b-49aa-a182-bb9fb8be32a2" />
 
 - [X] **회원 가입**
 
@@ -110,7 +111,7 @@
 
 <img width="300" height="600" alt="도서 등록" src="https://github.com/user-attachments/assets/a54b942d-acf1-4741-a4fe-37af68bebb2c" />
 <img width="300" height="600" alt="도서 수정" src="https://github.com/user-attachments/assets/de5aa02a-4237-4301-b013-b774462d639b" />
-<img width="600" height="313" alt="리뷰" src="https://github.com/user-attachments/assets/0b23a25a-422e-4246-918f-fbde594fadaf" />
+<img width="800" height="400" alt="리뷰" src="https://github.com/user-attachments/assets/0b23a25a-422e-4246-918f-fbde594fadaf" />
 <img width="502" height="300" alt="리뷰모달" src="https://github.com/user-attachments/assets/6b4291be-3937-4e24-9c17-386b4bad4e1c" />
 
 
