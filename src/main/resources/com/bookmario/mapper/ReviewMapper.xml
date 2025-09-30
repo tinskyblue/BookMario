@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bookmario.mapper.ReviewMapper">
+
+	<resultMap id="reviewMap" type="com.bookmario.domain.ReviewVO">
+	    <result property="rno" column="rno" />
+	    <result property="bookID" column="bookID" />
+	    <result property="review" column="review" />
+	    <result property="reviewer" column="reviewer" />
+	    <result property="reviewDate" column="reviewDate" javaType="java.sql.Timestamp" />
+	    <result property="updateDate" column="updateDate" javaType="java.sql.Timestamp" />
+	</resultMap>
+	
+	<insert id="insert" parameterType="com.bookmario.domain.ReviewVO">
+		insert into Review (rno, bookID, review, reviewer)
+		values (nextval('review_seq'), #{bookID}, #{review}, #{reviewer})
+	</insert>
+	
+	<select id="read" resultType="com.bookmario.domain.ReviewVO">
+		select * from Review where rno = #{rno}
+	</select>
+	
+	<delete id="delete">
+		delete from review where rno = #{rno}
+	</delete>
+	
+	<update id="update">
+		update Review set Review = #{review}, updateDate = Now() where rno = #{rno}
+	</update>
+	
+	<select id="getListWithPaging" resultType="com.bookmario.domain.ReviewVO">
+		<![CDATA[
+		select /*+INDEX(review idx_review) */
+    	rno, bookID, review, reviewer, reviewDate, updatedate
+		from review 
+		where bookID = #{bookID}
+		and rno > 0
+		order by rno asc
+		limit #{cri.amount} OFFSET GREATEST( (#{cri.pageNum} - 1) * #{cri.amount}, 0)
+		]]>
+	</select>
+	
+	<select id="getCountByBookID" resultType="int">
+		<![CDATA[
+		select count(rno) from review where bookID = #{bookID}
+		]]>
+	</select>
+	
+</mapper>
