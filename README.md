@@ -109,8 +109,8 @@
 
 ### [ 상품 관리 ]
 
-<img width="300" height="600" alt="도서 등록" src="https://github.com/user-attachments/assets/a54b942d-acf1-4741-a4fe-37af68bebb2c" />
-<img width="300" height="600" alt="도서 수정" src="https://github.com/user-attachments/assets/de5aa02a-4237-4301-b013-b774462d639b" />
+<img width="400" height="800" alt="도서 등록" src="https://github.com/user-attachments/assets/a54b942d-acf1-4741-a4fe-37af68bebb2c" />
+<img width="400" height="800" alt="도서 수정" src="https://github.com/user-attachments/assets/de5aa02a-4237-4301-b013-b774462d639b" />
 <img width="800" height="400" alt="리뷰" src="https://github.com/user-attachments/assets/0b23a25a-422e-4246-918f-fbde594fadaf" />
 <img width="502" height="300" alt="리뷰모달" src="https://github.com/user-attachments/assets/6b4291be-3937-4e24-9c17-386b4bad4e1c" />
 
