@@ -1,7 +1,7 @@
 <div align="center"><img width="300" height="300" alt="BookMario logo" src="https://github.com/user-attachments/assets/8a5478c3-c5e3-4197-888b-ca7a3049814a" /></div>
 
 # Spring을 활용한 인터넷 서점 개발
-> Spring Freamwork, JSP, JQuery등의 정부 표준 프레임 워크를 적극 활용한 전통적인 MVC패턴의 Spring Web app 입니다.
+> Spring Framework, JSP, JQuery등의 정부 표준 프레임워크를 적극 활용한 전통적인 MVC패턴의 Spring Web app입니다.
 
 <br>
 
