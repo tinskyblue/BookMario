@@ -114,7 +114,7 @@
 
    **[ 상세 구조 ]**
     + **[BookController](./bookmario/src/main/java/com/bookmario/controller/BookController.java)**   
-      : 이미지는 C:\Bookmario\resources\img 폴더에 저장합니다.   
+      : 이미지는 C:\Bookmario\resources\img 경로에 저장합니다.   
    
     + **BookService**   
        : [BookService](./bookmario/src/main/java/com/bookmario/service/BookService.java) - [BookServiceImpl](./bookmario/src/main/java/com/bookmario/service/BookServiceImpl.java)의 구조를 가집니다.
