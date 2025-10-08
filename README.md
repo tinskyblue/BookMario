@@ -199,3 +199,28 @@ Spring MVC, JSP, MyBatis, Spring Security, PostgreSQL을 활용하여 백엔드 
 
 <!-- ### 관리자 페이지 -->
 </details>
+
+## 트퍼블 슈팅
+<details>
+  <summary>도서 수정시 이미지 null 문제</summary>
+문제:
+기존 도서 수정 화면에서 파일 첨부 없이 저장하면, 이미지 값(book.image)이 null로 저장되어 기존 이미지가 사라지는 현상 발생
+
+원인:
+컨트롤러에서 MultipartFile file이 null 또는 비어있을 때 기존 이미지 값을 유지하지 않고, bookVO.image가 null로 덮어써지는 로직 때문
+
+해결 방법:
+파일 첨부가 없을 경우 기존 도서 정보를 조회하여 이미지 URL을 유지하도록 수정
+
+```
+if (file != null && !file.isEmpty()) {
+    String uploadPath = "/img";
+    String fileUrl = FileHelper.upload(uploadPath, file, request);
+    bookVO.setImage(fileUrl);
+} else {
+    bookVO.setImage(existingBookVO.getImage()); // 기존 이미지 유지
+}
+```
+결과:
+도서 수정 시 이미지 첨부 여부와 관계없이 기존 이미지가 유지됨
+</details>
