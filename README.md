@@ -200,7 +200,7 @@ Spring MVC, JSP, MyBatis, Spring Security, PostgreSQL을 활용하여 백엔드 
 <!-- ### 관리자 페이지 -->
 </details>
 
-## 트퍼블 슈팅
+## 트러블 슈팅
 <details>
   <summary>도서 수정시 이미지 null 문제</summary>
   
