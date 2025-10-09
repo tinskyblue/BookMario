@@ -203,14 +203,15 @@ Spring MVC, JSP, MyBatis, Spring Security, PostgreSQL을 활용하여 백엔드 
 ## 트퍼블 슈팅
 <details>
   <summary>도서 수정시 이미지 null 문제</summary>
-문제:
-기존 도서 수정 화면에서 파일 첨부 없이 저장하면, 이미지 값(book.image)이 null로 저장되어 기존 이미지가 사라지는 현상 발생
+  
++ 문제<br>
+  : 기존 도서 수정 화면에서 파일 첨부 없이 저장하면, 이미지 값(book.image)이 null로 저장되어 기존 이미지가 사라지는 현상이 발생했습니다.
 
-원인:
-컨트롤러에서 MultipartFile file이 null 또는 비어있을 때 기존 이미지 값을 유지하지 않고, bookVO.image가 null로 덮어써지는 로직 때문
++ 원인<br>
+  : 컨트롤러에서 MultipartFile file이 null 또는 비어있을 때 기존 이미지 값을 유지하지 않고, bookVO.image가 null로 덮어써지는 로직 때문이었습니다.
 
-해결 방법:
-파일 첨부가 없을 경우 기존 도서 정보를 조회하여 이미지 URL을 유지하도록 수정
++ 해결 방법<br>
+  : 파일 첨부가 없을 경우 기존 도서 정보를 조회하여 이미지 URL을 유지하도록 수정했습니다.
 
 ```
 if (file != null && !file.isEmpty()) {
@@ -221,6 +222,28 @@ if (file != null && !file.isEmpty()) {
     bookVO.setImage(existingBookVO.getImage()); // 기존 이미지 유지
 }
 ```
-결과:
-도서 수정 시 이미지 첨부 여부와 관계없이 기존 이미지가 유지됨
++ 결과<br>
+  : 도서 수정 시 이미지 첨부 여부와 관계없이 기존 이미지를 유지해서 해결했습니다.
 </details>
+
+<details>
+  <summary>테스트 케이스에서는 잘 작동하던 AOP가 실제 서비스 환경에서는 적용되지 않던 문제</summary>
+
++ 문제<br>
+  : 테스트 케이스에서는 정상적으로 작동하던 AOP가 실제 서비스 환경에서는 적용되지 않아 Advice가 실행되지 않는 현상 발생했습니다.
+
++ 원인<br>
+  : 테스트 케이스에서는 같은 컨텍스트 내에서 메서드를 호출해 JDK 동적 프록시로도 동작했지만, 실제 환경에서는 DI를 통한 호출이 필요하여 JDK 프록시만으로는 Advice가 적용되지 않았습니다.
+
++ 해결 방법<br>
+  : CGLIB 기반 클래스 프록시를 사용하도록 설정을 추가해서 해결했습니다.
+
+```
+<aop:aspectj-autoproxy proxy-target-class="true" />
+```
++ 결과<br>
+  : 실제 서비스 환경에서도 AOP가 정상적으로 동작했습니다.
+</details>
+
+<!-- 아쉬운 점 -->
+<!-- 제이쿼리와 순수js가 섞임 -->
