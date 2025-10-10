@@ -32,14 +32,5 @@ public class BookServiceTests {
 		// service.getList().forEach(board -> log.info(book));
 		service.getListWithPaging(new Criteria(2, 10)).forEach(book -> log.info(book));
 	}
-	
-//	@Test
-//	public void testAOP() throws Exception {
-//		log.info(service.getList());
-//		log.info("=================");
-//		log.info(service.doAdd("123", "456"));
-//		log.info("=================");
-//		log.info(service.doAdd("123", "ABC"));
-//	}
 
 }

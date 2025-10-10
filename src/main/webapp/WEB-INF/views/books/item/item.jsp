@@ -2,6 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="f" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 
 <head>
 	<!-- Favicon-->
@@ -119,10 +120,6 @@
 			            								<label>Review</label>
 			            								<input class="form-control" name='review' value='New Review !!'>
 			            							</div>
-			            							<div class="form-group">
-			            								<label>Reviewer</label>
-			            								<input class="form-control" name='reviewer' value='reviewer'>
-			            							</div>
 			            							<div class="form-group" style="display:none;">
 			            								<label>Review Date</label>
 			            								<input class="form-control" name='reviewDate' value=''>
@@ -176,7 +173,25 @@
 					    });	
 					});
 	            </script>
-			     
+	            
+				<c:choose>
+				    <c:when test="${pageContext.request.userPrincipal != null}">
+				        <script type="text/javascript">
+				            var currentUser = '<sec:authentication property="principal.username" />';
+				            var currentUserName = '<sec:authentication property="principal.member.username" />';
+				            console.log("로그인 사용자 ID:", currentUser);
+				            console.log("로그인 사용자 이름:", currentUserName);
+				        </script>
+				    </c:when>
+				    <c:otherwise>
+				        <script type="text/javascript">
+				            var currentUser = null;
+				            var currentUserName = null;
+				            console.log("비로그인 사용자");
+				        </script>
+				    </c:otherwise>
+				</c:choose>
+
 			    <!-- review script -->
 			    <script type="text/javascript">
 				    $(document).ready(function(){
@@ -230,20 +245,25 @@
 				        var modalRegisterBtn = $("#modalRegisterBtn");
 				        
 				     	// 리뷰 추가 버튼 클릭 시 모달 초기화
-				        $("#addReviewBtn").on("click", function(e){
-				        	modal.find("input").val("");
-				        	//modalInputReviewDate.closest("div").hide();
-				        	modal.find("button[id !='modalCloseBtn']").hide();
-				        	
-				        	modalRegisterBtn.show();
-				        	$("#myModal").modal("show");
-				        	
-				        });
+						$("#addReviewBtn").on("click", function(e) {
+						    // 로그인 여부 확인
+						    if (!currentUser) {
+						        alert("로그인 후 리뷰를 작성할 수 있습니다.");
+						        return;
+						    }
+						
+						    // 모달 초기화 및 표시
+						    modal.find("input").val("");
+						    modal.find("button[id !='modalCloseBtn']").hide();
+						    modalRegisterBtn.show();
+						    $("#myModal").modal("show");
+						});
+
 				     	// 리뷰 등록 버튼 클릭 시 처리
 				        modalRegisterBtn.on("click", function(e) {
 				        	var review = {
 				        		review: modalInputReview.val(),
-				        		reviewer: modalInputReviewer.val(),
+				        		reviewer: currentUser,
 				        		bookID:bookIDValue
 				        	};
 				        	reviewService.add(review, function(result){
@@ -257,23 +277,30 @@
 				        });
 				     	// 등록된 리뷰 수정 및 삭제 모달
 				        $(".chat").on("click", "li", function(e){
-					    	var rno = $(this).data("rno");
-					            
-					    	reviewService.get(rno, function(review){
-					    		modalInputReview.val(review.review);
-					    		modalInputReviewer.val(review.reviewer);
-					    		modalInputReviewDate.val(reviewService.displayTime(review.reviewDate)).attr("readonly","readonly");
-					    		modal.data("rno", review.rno);
-					    		
-					    		modal.find("button:not(#modalCloseBtn)").hide();
-					    		modalModBtn.show();
-					    		modalRemoveBtn.show();
-					    		
-					    		console.log(rno);
-					    		console.log(review);
-					    		$("#myModal").modal("show");
-					    	});
-					    });
+				            var rno = $(this).data("rno");
+				            
+				            reviewService.get(rno, function(review){
+				                // 로그인 사용자와 리뷰 작성자가 다르면 모달 안띄움
+				                if(currentUser !== review.reviewer){
+				                    alert("본인이 작성한 리뷰만 수정할 수 있습니다.");
+				                    return;
+				                }
+
+				                // 리뷰어가 본인일 경우에만 모달 표시
+				                modalInputReview.val(review.review);
+				                modalInputReviewer.val(currentUser); // 리뷰어 로그인 사용자로 고정
+				                modalInputReviewDate.val(reviewService.displayTime(review.reviewDate)).attr("readonly","readonly");
+				                modal.data("rno", review.rno);
+				                
+				                modal.find("button:not(#modalCloseBtn)").hide();
+				                modalModBtn.show();
+				                modalRemoveBtn.show();
+				                
+				                console.log(rno);
+				                console.log(review);
+				                $("#myModal").modal("show");
+				            });
+				        });
 				     	
 				     	// 페이지 수정과 삭제시 현재 리뷰가 포함된 페이지로 이동하도록 하는 부분
 				     	modalModBtn.on("click", function(e){

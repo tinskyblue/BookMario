@@ -53,7 +53,7 @@
 							</li>
 							<li class="list-group-item">
 								<strong>주소:</strong> 
-								<sec:authentication property="principal.member.addr1" />
+								<sec:authentication property="principal.member.address" />
 							</li>
 						</ul>
 					</div>

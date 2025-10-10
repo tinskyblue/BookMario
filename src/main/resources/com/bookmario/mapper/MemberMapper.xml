@@ -6,7 +6,6 @@
 
 	<resultMap type="com.bookmario.domain.MemberVO" id="memberMap">
 		<id property="userID" column="userid"/>
-		<result property="userID" column="userid"/>
 		<result property="userPass" column="userpass"/>
 		<result property="username" column="username"/>
 		<result property="regDate" column="regdate"/>
@@ -30,8 +29,8 @@
 	
 	<!-- 회원 가입 -->
 	<insert id="signup">
-		insert into member(userID, userPass, username, Phon, Addr1, Addr2)
-			values(#{userID}, #{userPass}, #{username}, #{Phon}, #{Addr1}, #{Addr2})
+		insert into member(userID, userPass, username, Phon, email, address)
+			values(#{userID}, #{userPass}, #{username}, #{Phon}, #{email}, #{address})
 	</insert>
 	
 	<!-- 회원 가입 권한 -->

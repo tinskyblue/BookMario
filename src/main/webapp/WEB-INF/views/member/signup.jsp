@@ -76,13 +76,13 @@
 
 							<div class="col-md-12 mb-3">
 								<label for="address">주소</label>
-								<input type="text" class="form-control" id="address" name="addr1" placeholder="서울특별시 강남구">
+								<input type="text" class="form-control" id="address" name="address" placeholder="서울특별시 강남구">
 								<div class="invalid-feedback">주소를 입력해주세요.</div>
 							</div>
 
 							<div class="col-md-12 mb-3">
-								<label for="address2">상세주소<span class="text-muted">&nbsp;(필수 아님)</span></label>
-								<input type="text" class="form-control" id="address2" name="addr2" placeholder="상세주소를 입력해주세요.">
+								<label for="phon">연락처<span class="text-muted">&nbsp;(하이폰(-)없이 입력해주세요.)</span></label>
+								<input type="text" class="form-control" id="phon" name="phon" placeholder="연락처를 입력해주세요.">
 							</div>
 							
 							<div class="col-md-12 mb-3">

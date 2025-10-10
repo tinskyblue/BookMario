@@ -9,7 +9,6 @@
 <title>Error Page</title>
 </head>
 <body>
-
 	<h1>에러 페이지</h1>
 	
 	<h4><c:out value="${exception.getMessage()}" /></h4>

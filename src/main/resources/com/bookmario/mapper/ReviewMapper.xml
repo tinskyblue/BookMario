@@ -14,8 +14,8 @@
 	</resultMap>
 	
 	<insert id="insert" parameterType="com.bookmario.domain.ReviewVO">
-		insert into Review (rno, bookID, review, reviewer)
-		values (nextval('review_seq'), #{bookID}, #{review}, #{reviewer})
+		insert into Review (bookID, review, reviewer)
+		values (#{bookID}, #{review}, #{reviewer})
 	</insert>
 	
 	<select id="read" resultType="com.bookmario.domain.ReviewVO">
