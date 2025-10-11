@@ -3,6 +3,7 @@ package com.bookmario.controller;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,18 +16,20 @@ import org.springframework.web.bind.annotation.RestController;
 import com.bookmario.domain.Criteria;
 import com.bookmario.domain.ReviewPageDTO;
 import com.bookmario.domain.ReviewVO;
+import com.bookmario.service.MemberService;
 import com.bookmario.service.ReviewService;
 
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j;
 
 @RequestMapping("/review/")
 @RestController
 @Log4j
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class ReviewController {
 
-	private ReviewService service;
+	private final ReviewService service;
 	
 	// 댓글 등록
 	@PostMapping(value = "/new", consumes = "application/json", produces = { MediaType.TEXT_PLAIN_VALUE })

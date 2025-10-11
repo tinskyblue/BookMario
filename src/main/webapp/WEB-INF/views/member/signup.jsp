@@ -15,6 +15,8 @@
 	<link href="/resources/member/css/signup.css" rel="stylesheet" />
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+	<!-- 카카오 주소검색 API -->
+	<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </head>
 <body>
 	<div id="root" class="d-flex flex-column min-vh-100">
@@ -35,7 +37,7 @@
 			<div class="container">
 				<div class="input-form-backgroud row">
 					<div class="input-form col-md-6 mx-auto">
-						<h4 class="mb-3">회원가입</h4>
+						<h4 class="mb-4 text-center">회원가입</h4>
 						<form class="validation-form" role="form" method="post" name="" autocomplete="off" novalidate>
 							<div class="col-md-12 mb-3">
 								<label for="userID">아이디</label> 
@@ -43,29 +45,24 @@
 								<div class="invalid-feedback">아이디를 확인해주세요.</div>
 							</div>
 							
-							<!-- <div class="row">
-								<div class="col-md-12 mb-3"> -->
-									<div class="col-md-12 mb-3">
-										<label for="userPass">비밀번호</label>
-										<input type="password" class="form-control" id="userPass" name="userPass" placeholder="" value="" required maxLength=20>
-										<div class="invalid-feedback">비밀번호를 확인해주세요.</div>
-									</div>
-								<!-- </div>
-										
-								<div class="col-md-6 mb-3">
-									<div class="col-md-12 mb-3">
-										<label for="userPass">비밀번호 재확인</label>
-										<input type="password" class="form-control" id="userPass2" name="userPass2" placeholder="" value="" required maxLength=20>
-										<div class="invalid-feedback">비밀번호를 확인해주세요.</div>
-									</div>
+							<div class="col-md-12 mb-3 row">
+								<div class="col-md-6">
+									<label for="userPass">비밀번호</label>
+									<input type="password" class="form-control" id="userPass" name="userPass" placeholder="" value="" required maxLength=20>
+									<div class="invalid-feedback">비밀번호를 확인해주세요.</div>
 								</div>
-							</div> -->
+									
+								<div class="col-md-6">
+									<label for="userPass">비밀번호 재입력</label>
+									<input type="password" class="form-control" id="userPass2" name="userPass2" placeholder="" value="" required maxLength=20>
+									<div class="invalid-feedback">비밀번호를 확인해주세요.</div>
+								</div>
+							</div>
 							
 							<div class="col-md-12 mb-3">
-								<label for="name">이름</label> 
+								<label for="name">이름<span class="text-muted">&nbsp;(3글자 이상 입력해주세요)</span></label> 
 								<input type="text" class="form-control" id="username" name="username" placeholder="" value="" required pattern=".{3,}">
 								<div class="invalid-feedback">이름을 확인해주세요.</div>
-								<div><small>3글자 이상 입력해주세요</small></div>
 							</div>
 
 							<div class="col-md-12 mb-3">
@@ -74,14 +71,24 @@
 								<div class="invalid-feedback">이메일을 입력해주세요.</div>
 							</div>
 
+							<div class="col-md-12 mb-2">
+							    <label for="address1">주소</label>
+							    <div class="input-group">
+							        <input type="text" class="form-control" id="address1" name="address1" placeholder="도로명 주소" readonly required>
+							        <div class="input-group-append">
+							            <button class="btn btn-outline-secondary" type="button" onclick="execDaumPostcode()">주소검색</button>
+							        </div>
+							        <div class="invalid-feedback">주소를 입력해주세요.</div>
+							    </div>
+							</div>
+							
 							<div class="col-md-12 mb-3">
-								<label for="address">주소</label>
-								<input type="text" class="form-control" id="address" name="address" placeholder="서울특별시 강남구">
-								<div class="invalid-feedback">주소를 입력해주세요.</div>
+							    <input type="text" class="form-control" id="address2" name="address2" placeholder="상세주소 입력" required>
+							    <div class="invalid-feedback">상세주소를 입력해주세요.</div>
 							</div>
 
 							<div class="col-md-12 mb-3">
-								<label for="phon">연락처<span class="text-muted">&nbsp;(하이폰(-)없이 입력해주세요.)</span></label>
+								<label for="phon">연락처<span class="text-muted">&nbsp;(하이폰(-)없이 입력해주세요)</span></label>
 								<input type="text" class="form-control" id="phon" name="phon" placeholder="연락처를 입력해주세요.">
 							</div>
 							
@@ -101,7 +108,6 @@
 								</div>
 							</div>
 							
-							
 							<hr class="col-md-12 mb-3" style="padding-left: 0px; padding-right: 0px;">
 							
 							<div class="custom-control custom-checkbox">
@@ -112,6 +118,7 @@
 							<div class="mb-3"></div>
 							<button class="btn btn-primary btn-lg btn-block" type="submit">가입 완료</button>
 							
+							<input type="hidden" id="fullAddress" name="address" />
 							<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 						</form>
 					</div>

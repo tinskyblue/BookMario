@@ -20,17 +20,16 @@ import com.bookmario.domain.Criteria;
 import com.bookmario.domain.PageDTO;
 import com.bookmario.helper.FileHelper;
 import com.bookmario.service.BookService;
-
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j;
 
 @Controller
 @Log4j
 @RequestMapping("/books")
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class BookController {
 
-	private BookService bookService;
+	private final BookService bookService;
 	
 	@GetMapping("")
 	public String index(Criteria cri, Model model) {

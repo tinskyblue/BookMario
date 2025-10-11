@@ -22,17 +22,18 @@ import com.bookmario.service.CartService;
 import com.bookmario.service.MemberService;
 
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j;
 
 @Controller
 @Log4j
 @RequestMapping("/carts")
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class CartsController {
 
-	MemberService memberService;
-	CartService cartService;
-	BookService bookService;
+	private final MemberService memberService;
+	private final CartService cartService;
+	private final BookService bookService;
 	
 	@GetMapping("")
 	public String carts(Principal principal, Model model) {

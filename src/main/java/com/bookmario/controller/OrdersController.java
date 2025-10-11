@@ -3,6 +3,7 @@ package com.bookmario.controller;
 import java.security.Principal;
 import java.util.List;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,18 +21,19 @@ import com.bookmario.service.MemberService;
 import com.bookmario.service.OrderService;
 
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j;
 
 @Controller
 @Log4j
 @RequestMapping("/orders")
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class OrdersController {
 	
-	BookService bookService;
-	MemberService memberService;
-	CartService cartService;
-	OrderService orderService;
+	private final BookService bookService;
+	private final MemberService memberService;
+	private final CartService cartService;
+	private final OrderService orderService;
 
 	// 주문 처리
 	@PostMapping("")

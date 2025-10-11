@@ -8,20 +8,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.bookmario.domain.AuthVO;
 import com.bookmario.domain.MemberVO;
+import com.bookmario.service.BookService;
+import com.bookmario.service.CartService;
 import com.bookmario.service.MemberService;
 
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j;
 
 @Controller
 @Log4j
 @RequestMapping("/member/*")
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class MemberController {
 	
-	MemberService memberService;
+	private final MemberService memberService;
 	
-	BCryptPasswordEncoder passEncoder;
+	private final BCryptPasswordEncoder passEncoder;
 	
 	@GetMapping("/signup")
 	public void signup() {

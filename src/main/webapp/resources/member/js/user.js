@@ -4,20 +4,51 @@
 
 // 부트스트랩 유효성 검사
 window.addEventListener('load', () => {
-	const forms = document.getElementsByClassName('validation-form');
+    const forms = document.getElementsByClassName('validation-form');
 
-		Array.prototype.filter.call(forms, (form) => {
-		form.addEventListener('submit', function (event) {
-			if (form.checkValidity() === false) {
-				event.preventDefault();
-				event.stopPropagation();
-			}
+    Array.prototype.filter.call(forms, (form) => {
+        const userPass = form.querySelector('#userPass');
+        const userPass2 = form.querySelector('#userPass2');
 
-			form.classList.add('was-validated');
-		}, false);
-	});
-}, false);
+        // 실시간 비밀번호 일치 검사
+        const validatePasswordMatch = () => {
+            if(userPass2.value === ''){
+                userPass2.classList.remove('is-valid', 'is-invalid');
+            } else if(userPass2.value === userPass.value){
+                userPass2.classList.add('is-valid');
+                userPass2.classList.remove('is-invalid');
+            } else {
+                userPass2.classList.add('is-invalid');
+                userPass2.classList.remove('is-valid');
+            }
+        };
 
+        userPass.addEventListener('input', validatePasswordMatch);
+        userPass2.addEventListener('input', validatePasswordMatch);
+
+        // 폼 제출 시 검사
+        form.addEventListener('submit', function(event) {
+            validatePasswordMatch(); // 제출 전에 최종 체크
+
+            // 비밀번호 불일치 시 제출 막기
+            if(userPass.value !== userPass2.value){
+                event.preventDefault();
+                event.stopPropagation();
+                alert("비밀번호가 일치하지 않습니다.");
+                return;
+            }
+
+            // HTML5 / Bootstrap 기본 유효성 검사
+            if(form.checkValidity() === false){
+                event.preventDefault();
+                event.stopPropagation();
+                alert("일치하지 않는 항목이 있습니다.");
+            }
+
+            form.classList.add('was-validated');
+        }, false);
+    });
+});
 
 // 비밀번호 보이게해주는 타입변경 이벤트
 $(document).ready(function(){
@@ -33,89 +64,20 @@ $(document).ready(function(){
     });
 });
 
-// 비밀번호 재확인
-
-
-// 부트스트랩x 유효성 검사 메서드
-/*function Validation() {
-    // 변수에 저장
-    var id = document.getElementById("userID")
-    var pw = document.getElementById("userPass")
-    var ename = document.getElementById("username")
-
-    //아이디 확인
-    if(id.value.length <4){
-    	alert("아이디를 4글자 이상 입력하세요.")
-        id.focus();
-        return false;
-    }
-    //아이디 영어 대소문자 확인
-    else if(!checkEngNumber(id.value)){
-        alert("영문 대소문자, 숫자만 입력하세요.")
-        id.focus();
-        return false;
-    }
-
-    //비밀번호 확인
-    if(pw.value.length <4){
-        alert("비밀번호를 4글자 이상 입력하세요.")
-        pw.focus();
-        return false;
-    }
-    //비밀번호 영어 대소문자 확인
-    else if(!checkEngNumber(pw.value)){
-        alert("영문 대소문자, 숫자만 입력하세요.")
-        pw.focus();
-        return false;
-    }
-
-    //이름 확인 = 한글과 영어만 가능하도록
-    if(ename.value == ""){
-        alert("이름을 입력하세요.")
-        ename.focus();
-        return false;
-    }
-    
-    else if(!checkKorEng(ename.value)){
-        alert("한글, 영어만 입력하세요.")
-        ename.focus();
-        return false;
-    }
-
+// 카카오 API
+function execDaumPostcode() {
+    new daum.Postcode({
+        oncomplete: function(data) {
+            document.getElementById('address1').value = data.roadAddress;
+            document.getElementById('address2').value = '';
+        }
+    }).open();
 }
 
-// 문자열이 영어, 숫자인지 확인하는 메서드 
-function checkEngNumber(value){
-    var count = 0;
+// 폼 제출 시 hidden input에 합쳐서 담기
+document.querySelector('form').addEventListener('submit', function(e) {
+    const address1 = document.getElementById('address1').value;
+    const address2 = document.getElementById('address2').value;
+    document.getElementById('fullAddress').value = address1 + " " + address2;
+});
 
-    for(var i=0; i<value.length; i++){
-        if((value.charCodeAt(i)>=65 && value.charCodeAt(i)<=90) || (value.charCodeAt(i)>=97 && value.charCodeAt(i)<=122) || (value.charCodeAt(i)>=48 && value.charCodeAt(i)<=57)){
-            count += 1;
-        }
-    }
-
-    //카운트 수와 문자의 길이가 같다면 true
-    if(count === (value.length)){
-        return true;
-    } else{
-        return false;
-    }
-}
-
-//영어, 한글인지(가~힣) 확인
-function checkKorEng(value){
-    var count = 0;
-
-    for(var i=0; i<value.length; i++){
-        console.log(value.charCodeAt(i));
-        if((value.charCodeAt(i)>=65 && value.charCodeAt(i)<=90) || (value.charCodeAt(i)>=97 && value.charCodeAt(i)<=122) || (value.charCodeAt(i)>=44032 && value.charCodeAt(i)<=55203)){
-            count += 1;
-        }
-    }
-
-    if(count === (value.length)){
-        return true;
-    } else{
-        return false;
-    }
-}*/
