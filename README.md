@@ -200,7 +200,6 @@ Spring MVC, JSP, MyBatis, Spring Security, PostgreSQL을 활용하여 백엔드 
 <!-- ### 관리자 페이지 -->
 </details>
 
-<!--
 ## 트러블 슈팅
 <details>
   <summary>도서 수정시 이미지 null 문제</summary>
@@ -227,7 +226,6 @@ if (file != null && !file.isEmpty()) {
   : 도서 수정 시 이미지 첨부 여부와 관계없이 기존 이미지를 유지해서 해결했습니다.
 </details>
 
-아쉬운 점
-제이쿼리와 순수js가 섞임
-
--->
+## 아쉬운 점 및 추가하고 싶은 기능
++ JavaScript와 jQuery가 혼용되어 코드 일관성이 부족했고, 실제 결제 PG 시스템을 구현하지 못한 점이 아쉬웠습니다.<br>
+  이후에는 코드 통일과 결제 기능 구현을 통해 프로젝트 완성도를 높이고자 합니다.
