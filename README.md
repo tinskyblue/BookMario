@@ -108,8 +108,15 @@ Spring MVC, JSP, MyBatis, Spring Security, PostgreSQL을 활용하여 백엔드 
 
 <img width="400" height="800" alt="도서 등록" src="https://github.com/user-attachments/assets/a54b942d-acf1-4741-a4fe-37af68bebb2c" />
 <img width="400" height="800" alt="도서 수정" src="https://github.com/user-attachments/assets/de5aa02a-4237-4301-b013-b774462d639b" />
-<img width="502" height="300" alt="리뷰모달" src="https://github.com/user-attachments/assets/6b4291be-3937-4e24-9c17-386b4bad4e1c" />
-<img width="800" height="400" alt="리뷰" src="https://github.com/user-attachments/assets/0b23a25a-422e-4246-918f-fbde594fadaf" />
+
+<img width="500" height="300" alt="리뷰 모달" src="https://github.com/user-attachments/assets/1bf6950e-6b14-41b1-b153-dcaf6c32fa2a" />
+<img width="501" height="238" alt="리뷰 수정" src="https://github.com/user-attachments/assets/b4382968-15b7-42b0-84bb-85b207ea9919" />
+
+<img width="800" height="400" alt="리뷰" src="https://github.com/user-attachments/assets/b007591b-96e1-4ffa-84bf-6d8e56bca7dd" />
+
+<img width="453" height="151" alt="다른 사용자 리뷰 수정" src="https://github.com/user-attachments/assets/049512bb-e848-47ca-badf-5159d3639808" />
+<img width="453" height="150" alt="비로그인 리뷰" src="https://github.com/user-attachments/assets/bb6f48b9-c0b5-4e19-944d-70a49d750604" />
+
 
 - [X] **상품의 CRUD**
 
