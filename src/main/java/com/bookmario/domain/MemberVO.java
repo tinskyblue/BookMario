@@ -11,8 +11,8 @@ public class MemberVO {
 	private String userID;
 	private String userPass;
 	private String username;
-	private String Email;
-	private String Phon;
+	private String email;
+	private String phon;
 	private String address;
 	private Date regiDate;
 	private boolean enabled;

@@ -13,13 +13,12 @@ public class CartVO {
     public static final int DELIVERED = 3;
     
     private Long cartID;
-    private int status;
     private String userID;
-    
-    private int count;
-	
+    private int status;
+   
     private List<ItemVO> items;
     private int totalPrice;
+    private int count;
     
     public CartVO(int status, String userID) {
         this.status = status;

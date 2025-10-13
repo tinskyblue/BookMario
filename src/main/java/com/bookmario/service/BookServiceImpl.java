@@ -18,12 +18,6 @@ public class BookServiceImpl implements BookService {
 	
 	private BookMapper mapper;
 	
-	// AOP 테스트용 오버라이딩
-	@Override
-	public Integer doAdd(String str1, String str2) {
-		return Integer.parseInt(str1) + Integer.parseInt(str2);
-	}
-
 	// 모든 상품 목록
 	@Override
 	public List<BookVO> getList() {
@@ -71,6 +65,12 @@ public class BookServiceImpl implements BookService {
 	public int getTotal(Criteria cri) {
 		log.info("get total count");
 		return mapper.getTotalCount(cri);
+	}
+
+	@Override
+	public Integer doAdd(String str1, String str2) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

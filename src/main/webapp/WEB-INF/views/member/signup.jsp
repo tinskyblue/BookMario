@@ -83,13 +83,14 @@
 							</div>
 							
 							<div class="col-md-12 mb-3">
-							    <input type="text" class="form-control" id="address2" name="address2" placeholder="상세주소 입력" required>
+							    <input type="text" class="form-control" id="address2" name="address2" placeholder="상세주소를 입력해주세요" required>
 							    <div class="invalid-feedback">상세주소를 입력해주세요.</div>
 							</div>
 
 							<div class="col-md-12 mb-3">
 								<label for="phon">연락처<span class="text-muted">&nbsp;(하이폰(-)없이 입력해주세요)</span></label>
-								<input type="text" class="form-control" id="phon" name="phon" placeholder="연락처를 입력해주세요.">
+								<input type="text" class="form-control" id="phon" name="phon" placeholder="연락처를 입력해주세요." required>
+								<div class="invalid-feedback">연락처를 입력해주세요.</div>
 							</div>
 							
 							<div class="col-md-12 mb-3">

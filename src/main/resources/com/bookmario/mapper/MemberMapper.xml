@@ -8,6 +8,9 @@
 		<id property="userID" column="userid"/>
 		<result property="userPass" column="userpass"/>
 		<result property="username" column="username"/>
+		<result property="phon" column="phon"/>
+    	<result property="email" column="email"/>
+    	<result property="address" column="address"/>
 		<result property="regDate" column="regdate"/>
 		<collection property="authList" resultMap="authMap">
 		</collection>
@@ -20,7 +23,7 @@
 	
 	<select id="read" resultMap="memberMap">
 	Select
-		mem.userID, userPass, username, enabled, regDate, auth
+		mem.userID, mem.userPass, mem.username, mem.phon, mem.email, mem.address, mem.regDate, auth.auth
 	FROM
 		member mem LEFT OUTER JOIN member_auth auth on mem.userID = auth.userID
 	WHERE

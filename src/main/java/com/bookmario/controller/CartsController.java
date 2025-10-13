@@ -43,22 +43,20 @@ public class CartsController {
         // 카트에
         CartVO cart = memberService.getCart(currUserId);
         if (cart != null) {
-            // 담긴 아이템
             List<ItemVO> items = cartService.getItems(cart);
-            for (ItemVO i : items) {
-                i.setBookVO(bookService.get(i.getBookID())); // 아이템이 가리키는 책
-            }
-            // 합계
             int sum = 0;
             int count = 0;
             for (ItemVO i : items) {
-                sum += i.getPrice() * i.getAmount();
-                count = count + i.getAmount();
+                i.setBookVO(bookService.get(i.getBookID())); // 책 정보 주입
+                sum += i.getPrice() * i.getAmount(); // 가격 계산
+                count = count + i.getAmount(); // 총 수량 계산
             }
+            
+            cart.setItems(items);
             cart.setTotalPrice(sum);
             cart.setCount(count);
+            	
             model.addAttribute("cart", cart);
-            model.addAttribute("items", items);
         }
 		return "/carts/carts";
 	}

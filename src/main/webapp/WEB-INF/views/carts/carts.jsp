@@ -43,7 +43,7 @@
 					    </tr>
 					  </thead>
 					  <tbody>
-					    <c:forEach var="item" items="${ items }" varStatus="status">
+					    <c:forEach var="item" items="${ cart.items }" varStatus="status">
 					        <tr>
 					            <th>${ status.count }</th>
 					            <td>${ item.bookVO.title }</td>
