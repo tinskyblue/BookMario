@@ -38,7 +38,8 @@ Spring MVC, JSP, MyBatis, Spring Security, PostgreSQL을 활용하여 백엔드 
 
 <details>
   <summary>클릭하면 내용이 보여집니다</summary>
-<div align="center"><img width="1085" height="605" alt="ERD" src="https://github.com/user-attachments/assets/aed9aad7-ec06-40aa-8288-1424ba1bd232" /></div>
+<div align="center"><img width="1089" height="601" alt="bookmario drawio" src="https://github.com/user-attachments/assets/47541ccc-e94f-4b13-a7fc-2a6f10c8acc9" /></div>
+
 </details>
 
 <hr/>
@@ -47,7 +48,8 @@ Spring MVC, JSP, MyBatis, Spring Security, PostgreSQL을 활용하여 백엔드 
 <details>
   <summary>클릭하면 내용이 보여집니다</summary>
 
-<img width="300" height="600" alt="회원가입" src="https://github.com/user-attachments/assets/f4de1701-b693-4206-a31f-2079dc0f5d9e" />
+<img width="300" height="600" alt="회원가입" src="https://github.com/user-attachments/assets/481c9869-83b5-4221-9cc6-fd6f20da330f" />
+<img width="300" height="600" alt="카카오 주소 API" src="https://github.com/user-attachments/assets/df9b9773-1abf-4891-9a34-5771959a9f89" />
 <img width="500" height="300" alt="로그인" src="https://github.com/user-attachments/assets/c9fa1231-ca5b-49aa-a182-bb9fb8be32a2" />
 
 - [X] **회원 가입**
