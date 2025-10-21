@@ -61,7 +61,7 @@
 						<div class="form-group row">
 							<label class="col-sm-2">ISBN</label>
 							<div class="col-sm-3">
-								<input type="text" name="bookISBN" class="form-control" required maxLength=20>
+								<input type="text" name="bookISBN" class="form-control" maxLength=20>
 								<div class="invalid-feedback">ISBN을 확인해주세요.</div>
 							</div>
 						</div>

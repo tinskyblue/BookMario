@@ -48,7 +48,7 @@
 				                <button class="btn btn-outline-dark" type="button" onclick="location.href='<c:url value="/carts" />'">
 				                    <i class="bi-cart-fill me-1"></i>
 										Cart
-				                    <span class="badge bg-dark text-white ms-1 rounded-pill">${ cart.count }</span>
+				                    <span class="badge bg-dark text-white ms-1 rounded-pill">${ cartCount }</span>
 				                </button>
 				            </form>
 							<li class="nav-item"><a class="nav-link" href="<c:url value="/orders" />">주문 내역</a></li>

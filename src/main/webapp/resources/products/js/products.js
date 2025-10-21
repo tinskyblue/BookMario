@@ -28,7 +28,7 @@ $(document).ready(function() {
 	});
 	
 	// 카테고리 선택
-	$("#category a").on("click",function(e){
+	$("#category a").not(".allBooks").on("click",function(e){
 		e.preventDefault();
 		
 		var word = $.trim(searchForm.find("input[name='keyword']").val());

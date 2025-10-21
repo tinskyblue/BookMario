@@ -78,5 +78,10 @@ public class CartServiceImpl implements CartService {
 	public int countItemsInCart(Long cartID) {
 		return mapper.countItemsInCart(cartID);
 	}
+
+	@Override
+	public Long getCartIdByUsername(String username) {
+		return mapper.getCartIdByUsername(username);
+	}
 	
 }

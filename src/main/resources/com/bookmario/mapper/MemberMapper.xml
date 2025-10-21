@@ -32,8 +32,8 @@
 	
 	<!-- 회원 가입 -->
 	<insert id="signup">
-		insert into member(userID, userPass, username, Phon, email, address)
-			values(#{userID}, #{userPass}, #{username}, #{Phon}, #{email}, #{address})
+		insert into member(userID, userPass, username, phon, email, address)
+			values(#{userID}, #{userPass}, #{username}, #{phon}, #{email}, #{address})
 	</insert>
 	
 	<!-- 회원 가입 권한 -->

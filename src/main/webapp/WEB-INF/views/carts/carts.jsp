@@ -55,7 +55,8 @@
     								</form>
 								</td>
 					            <td><fmt:formatNumber value="${ item.bookVO.price * item.amount }" pattern="#,###" />원</td>
-					            <td style=width:80px;><a class="btn btn-outline-danger mt-auto" href="<c:url value='/carts/delete/${ item.itemID }' />">삭제</a></td>
+					            <td style="width:80px;"><a href="javascript:void(0)" class="btn btn-outline-danger mt-auto"onclick="deleteItem(${item.itemID})">삭제</a></td>
+					            
 					        </tr>
 					    </c:forEach>
 					  </tbody>
@@ -77,7 +78,6 @@
 		    </div>
 		</section>
 		
-		<script type="text/javascript" src="/resources/item/js/review.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		
 		<!-- SweetAlert2 알림 처리 -->
@@ -97,12 +97,22 @@
 		                Swal.fire({
 		                    icon: 'error',
 		                    title: '장바구니에 상품이 없습니다.',
-		                    text: '${errorMessage}'
+		                    text: '주문할 상품이 없습니다.'
 		                });
 		            </c:otherwise>
 		        </c:choose>
 		    </script>
 		</c:if>
+		
+		<script>
+			function deleteItem(itemID) {
+    			fetch('/carts/' + itemID, { method: 'DELETE' })
+        		.then(res => {
+            	if(res.ok) window.location.reload();
+            	else Swal.fire('삭제 실패', '상품을 삭제하지 못했습니다.', 'error'); //title, text, icon
+        		});
+			}
+		</script>
 		
 		<footer id="footer" class="mt-auto">
 			<div id="nav_box">

@@ -35,4 +35,7 @@ public interface CartService {
 	// 장바구니 아이템 개수 조회
 	public int countItemsInCart(Long cartID);
 
+	// userID(username)으로 cartID조회
+    public Long getCartIdByUsername(String username);
+
 }

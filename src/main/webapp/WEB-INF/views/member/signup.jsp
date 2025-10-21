@@ -61,7 +61,7 @@
 							
 							<div class="col-md-12 mb-3">
 								<label for="name">이름<span class="text-muted">&nbsp;(3글자 이상 입력해주세요)</span></label> 
-								<input type="text" class="form-control" id="username" name="username" placeholder="" value="" required pattern=".{3,}">
+								<input type="text" class="form-control" id="userName" name="username" placeholder="" value="" required pattern=".{3,}">
 								<div class="invalid-feedback">이름을 확인해주세요.</div>
 							</div>
 

@@ -48,6 +48,21 @@
 		    </div>	
 		</section>
 		
+		<c:if test="${not empty signupSuccess}">
+		    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		    <script type="text/javascript">
+		        $(document).ready(function() {
+		            Swal.fire({
+		                icon: 'success',
+		                title: '회원가입 완료',
+		                text: '회원가입이 성공적으로 완료되었습니다!',
+		                confirmButtonText: '확인'
+		            });
+		        });
+		    </script>
+		</c:if>
+
+		
 		<footer id="footer" class="mt-auto">
 			<div id="nav_box">
 				<%@ include file="../include/footer.jsp" %>

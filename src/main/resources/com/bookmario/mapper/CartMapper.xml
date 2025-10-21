@@ -57,5 +57,12 @@
         from items
         where cartID = #{cartID}
     </select>
+    
+    <!--  -->
+    <select id="getCartIdByUsername" parameterType="String" resultType="Long">
+    	SELECT cartID
+    	FROM carts
+    	WHERE userID = #{userID} AND status = 0
+	</select>
 	
 </mapper>

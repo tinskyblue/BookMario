@@ -26,7 +26,6 @@
 				<div class="book_allwrap">
 					<!-- 좌측 컨텐츠 -->
 					<aside class="book_left">
-							<h3><a href="/books/products">도서 모두보기</a></h3>
 	
 						<!-- 검색 -->
 						<div class='row search'>
@@ -47,6 +46,7 @@
 						<!-- 카테고리 -->	
 						<div class="category_menu">
 							<ul id="category">
+								<li><a href="/books/products" class="allBooks">도서 모두보기</a></li>
 								<li><a href="health" >건강</a></li>
 								<li><a href="hobby">취미</a></li>
 								<li><a href="management">경영</a></li>

@@ -35,5 +35,8 @@ public interface CartMapper {
 	
 	// 장바구니에 아이템 수 체크
     public int countItemsInCart(Long cartID);
+    
+    // userID(username)으로 cartID조회
+    public Long getCartIdByUsername(String userID);
 	
 }
