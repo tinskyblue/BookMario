@@ -46,7 +46,7 @@ CRUD 구현과 웹 애플리케이션 전 과정을 학습하기 위해 진행�
 
 <details>
   <summary>클릭하면 내용이 보여집니다</summary>
-<div align="center"><img width="1089" height="601" alt="bookmario drawio" src="https://github.com/user-attachments/assets/47541ccc-e94f-4b13-a7fc-2a6f10c8acc9" /></div>
+<div align="center"><img width="1089" height="601" alt="bookmario ERD" src="https://github.com/user-attachments/assets/47541ccc-e94f-4b13-a7fc-2a6f10c8acc9" /></div>
 
 </details>
 
@@ -66,13 +66,13 @@ CRUD 구현과 웹 애플리케이션 전 과정을 학습하기 위해 진행�
       : 회원 가입을 할 수 있습니다.
 
     **[ 상세 구조 ]**  
-     + **[MemberController](./bookmario/src/main/java/com/bookmario/controller/MemberController.java)**
+     + **[MemberController](./src/main/java/com/bookmario/controller/MemberController.java)**
 
      + **MemberService**  
-       : [MemberService.java](./bookmario/src/main/java/com/bookmario/service/MemberService.java) - [MemberServiceImpl.java](./bookmario/src/main/java/com/bookmario/service/MemberServiceImpl.java)의 구조를 가집니다.
+       : [MemberService.java](./src/main/java/com/bookmario/service/MemberService.java) - [MemberServiceImpl.java](./src/main/java/com/bookmario/service/MemberServiceImpl.java)의 구조를 가집니다.
 
      + **MemberMapper**  
-       : [MemberMapper.java](./bookmario/src/main/java/com/bookmario/mapper/MemberMapper.java) - [MemberMapper.xml](./bookmario/src/main/resources/com/bookmario/mapper/MemberMapper.xml)의 구조를 가집니다.
+       : [MemberMapper.java](./src/main/java/com/bookmario/mapper/MemberMapper.java) - [MemberMapper.xml](./src/main/resources/com/bookmario/mapper/MemberMapper.xml)의 구조를 가집니다.
 
 - [X] **로그인**  
 
@@ -92,20 +92,20 @@ CRUD 구현과 웹 애플리케이션 전 과정을 학습하기 위해 진행�
        : PasswordEncoder구현한 클래스중 하나입니다. 해시 함수로 특정 문자열을 암호화하기 때문에 암호화를 한 후에, 다시 원문으로 돌리지 못합니다.
 
      + **CustomUserDetailsService**    
-       : [CustomUserDetailsService](./bookmario/src/main/java/com/bookmario/security/CustomUserDetailsService.java)은 UserDetailsService를 구현하여 DB의 사용자 정보를 조회합니다.    
+       : [CustomUserDetailsService](./src/main/java/com/bookmario/security/CustomUserDetailsService.java)은 UserDetailsService를 구현하여 DB의 사용자 정보를 조회합니다.    
        : 유일한 메소드인 loadUserByUsername()는 UserDetails를 상속받아 만든 CustomUser를 반환합니다.   
 
      + **CustomUser**   
-       : [CustomUser](./bookmario/src/main/java/com/bookmario/security/domain/CustomUser.java)는 조회한 사용자 정보를 담고있습니다.   
+       : [CustomUser](./src/main/java/com/bookmario/security/domain/CustomUser.java)는 조회한 사용자 정보를 담고있습니다.   
        : Spring Security에서 제공하고 있는 UserDetails를 구현한 여러 클래스 중에서 User클래스를 상속받았습니다.
 
      + **security-context.xml**   
-      : [security-context.xml](./bookmario/src/main/webapp/WEB-INF/spring/security-context.xml)은 Spring Security와 관련된 설정을 담고 있습니다.   
-      : AuthenticationSuccessHandler를 상속받아 [로그인 성공 로직](./bookmario/src/main/java/com/bookmario/security/CustomLoginSuccessHandler.java)을 처리합니다.   
+      : [security-context.xml](./src/main/webapp/WEB-INF/spring/security-context.xml)은 Spring Security와 관련된 설정을 담고 있습니다.   
+      : AuthenticationSuccessHandler를 상속받아 [로그인 성공 로직](./src/main/java/com/bookmario/security/CustomLoginSuccessHandler.java)을 처리합니다.   
       <!-- : AuthenticationFailureHandler를 상속받아 [로그인 실패 로직]()을 처리합니다. 로그인의 실패 원인을 알려줍니다. -->
-      : AccessDeniedHandler를 상속받아 권한이 없는 페이지에 대하여 [접근 제한 로직](./bookmario/src/main/java/com/bookmario/security/CustomAccessDeniedHandler.java)을 처리합니다.    
+      : AccessDeniedHandler를 상속받아 권한이 없는 페이지에 대하여 [접근 제한 로직](./src/main/java/com/bookmario/security/CustomAccessDeniedHandler.java)을 처리합니다.    
      + **MemberMapper**   
-      : [MemberMapper.java](./bookmario/src/main/java/com/bookmario/mapper/MemberMapper.java) - [MemberMapper.xml](./bookmario/src/main/resources/com/bookmario/mapper/MemberMapper.xml)의 구조를 가집니다.
+      : [MemberMapper.java](./src/main/java/com/bookmario/mapper/MemberMapper.java) - [MemberMapper.xml](./src/main/resources/com/bookmario/mapper/MemberMapper.xml)의 구조를 가집니다.
 </details>
 
 <hr/>
@@ -133,14 +133,14 @@ CRUD 구현과 웹 애플리케이션 전 과정을 학습하기 위해 진행�
      : 상품은 도서 분류 **카테고리**를 지정하거나 **검색**을 통하여 조회할 수 있습니다.
 
    **[ 상세 구조 ]**
-    + **[BookController](./bookmario/src/main/java/com/bookmario/controller/BookController.java)**   
+    + **[BookController](./src/main/java/com/bookmario/controller/BookController.java)**   
       : 이미지는 C:\Bookmario\resources\img 경로에 저장합니다.   
    
     + **BookService**   
-       : [BookService](./bookmario/src/main/java/com/bookmario/service/BookService.java) - [BookServiceImpl](./bookmario/src/main/java/com/bookmario/service/BookServiceImpl.java)의 구조를 가집니다.
+       : [BookService](./src/main/java/com/bookmario/service/BookService.java) - [BookServiceImpl](./src/main/java/com/bookmario/service/BookServiceImpl.java)의 구조를 가집니다.
 
     + **BookMapper**   
-       : [BookMapper.java](./bookmario/src/main/java/com/bookmario/mapper/BookMapper.java) - [BookMapper.xml](./bookmario/src/main/resources/com/bookmario/mapper/BookMapper.xml)의 구조를 가집니다.
+       : [BookMapper.java](./src/main/java/com/bookmario/mapper/BookMapper.java) - [BookMapper.xml](./src/main/resources/com/bookmario/mapper/BookMapper.xml)의 구조를 가집니다.
 
 - [X] **리뷰 CRUD**
 
@@ -149,11 +149,11 @@ CRUD 구현과 웹 애플리케이션 전 과정을 학습하기 위해 진행�
     : 리뷰에 대한 조회는 제품의 리뷰 탭 에서 누구나 가능합니다.
 
    **[ 상세 구조 ]**   
-    + **[ReviewController](./bookmario/src/main/java/com/bookmario/controller/ReviewController.java)**   
+    + **[ReviewController](./src/main/java/com/bookmario/controller/ReviewController.java)**   
        : json를 반환하는 RestController를 사용하였고, View단에서 JQuery의 AJAX로 데이터를 주고 받습니다.
 
     + **[ReviewMapper]**   
-       :[ReviewMapper.java](./bookmario/src/main/java/com/bookmario/mapper/ReviewMapper.java) - [ReviewMapper.xml](./bookmario/src/main/resources/com/bookmario/mapper/ReviewMapper.xml)의 구조를 가집니다.
+       :[ReviewMapper.java](./src/main/java/com/bookmario/mapper/ReviewMapper.java) - [ReviewMapper.xml](./src/main/resources/com/bookmario/mapper/ReviewMapper.xml)의 구조를 가집니다.
 </details>
 
 <hr/>
@@ -172,13 +172,13 @@ CRUD 구현과 웹 애플리케이션 전 과정을 학습하기 위해 진행�
     : 장바구니에서 담았던 상품을 삭제할 수도 있습니다.
 
    **[ 상세 구조 ]**
-    + **[CartsController](./bookmario/src/main/java/com/bookmario/controller/CartsController.java)**
+    + **[CartsController](./src/main/java/com/bookmario/controller/CartsController.java)**
       
     + **CartService**   
-       : [CartService.java](./bookmario/src/main/java/com/bookmario/service/CartService.java) - [CartService.xml](./bookmario/src/main/java/com/bookmario/service/CartServiceImpl.java)의 구조를 가집니다.
+       : [CartService.java](./src/main/java/com/bookmario/service/CartService.java) - [CartService.xml](./src/main/java/com/bookmario/service/CartServiceImpl.java)의 구조를 가집니다.
 
     + **CartMapper**   
-       : [CartMapper.java](./bookmario/src/main/java/com/bookmario/mapper/CartMapper.java) - [CartMapper.xml](./bookmario/src/main/resources/com/bookmario/mapper/CartMapper.xml)의 구조를 가집니다.
+       : [CartMapper.java](./src/main/java/com/bookmario/mapper/CartMapper.java) - [CartMapper.xml](./src/main/resources/com/bookmario/mapper/CartMapper.xml)의 구조를 가집니다.
 
 - [X] **구매**
 
@@ -186,13 +186,13 @@ CRUD 구현과 웹 애플리케이션 전 과정을 학습하기 위해 진행�
     : 장바구니에 있는 여러 상품들을 함께 주문할 수 있습니다.
 
    **[ 상세 구조 ]**
-    + **[OrdersController](./bookmario/src/main/java/com/bookmario/controller/OrdersController.java)**
+    + **[OrdersController](./src/main/java/com/bookmario/controller/OrdersController.java)**
 
     + **OrderService**   
-       : [OrderService](./bookmario/src/main/java/com/bookmario/service/OrderService.java) - [OrderServiceImpl](./bookmario/src/main/java/com/bookmario/service/OrderServiceImpl.java)의 구조를 가집니다.
+       : [OrderService](./src/main/java/com/bookmario/service/OrderService.java) - [OrderServiceImpl](./src/main/java/com/bookmario/service/OrderServiceImpl.java)의 구조를 가집니다.
 
     + **OrderMapper**   
-       : [OrderMapper.java](./bookmario/src/main/java/com/bookmario/mapper/OrderMapper.java) - [OrderMapper.xml](./bookmario/src/main/resources/com/bookmario/mapper/OrderMapper.xml)의 구조를 가집니다.
+       : [OrderMapper.java](./src/main/java/com/bookmario/mapper/OrderMapper.java) - [OrderMapper.xml](./src/main/resources/com/bookmario/mapper/OrderMapper.xml)의 구조를 가집니다.
 </details>
 
 ## UI
