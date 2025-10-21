@@ -16,6 +16,9 @@ CRUD 구현과 웹 애플리케이션 전 과정을 학습하기 위해 진행�
 ### 개발기간
 2025/09/27 ~ 2025/10/16
 
+### 프로젝트 시연 영상 링크
+[![유튜브](https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1567002882/noticon/ctn6kpoyyaawcggjqmfj.png)](https://youtu.be/xfJiXpY6TEE)
+
 ### 핵심 기능은?
 #### User
 + Spring Security(세션 기반 로그인/권한 관리)를 이용한 회원가입과 로그인
