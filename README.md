@@ -57,7 +57,6 @@ CRUD 구현과 웹 애플리케이션 전 과정을 학습하기 위해 진행�
   <summary>클릭하면 내용이 보여집니다</summary>
 
 <img width="300" height="600" alt="회원가입" src="https://github.com/user-attachments/assets/481c9869-83b5-4221-9cc6-fd6f20da330f" />
-<img width="300" height="600" alt="카카오 주소 API" src="https://github.com/user-attachments/assets/df9b9773-1abf-4891-9a34-5771959a9f89" />
 <img width="500" height="300" alt="로그인" src="https://github.com/user-attachments/assets/c9fa1231-ca5b-49aa-a182-bb9fb8be32a2" />
 
 - [X] **회원 가입**
@@ -116,14 +115,7 @@ CRUD 구현과 웹 애플리케이션 전 과정을 학습하기 위해 진행�
 
 <img width="400" height="800" alt="도서 등록" src="https://github.com/user-attachments/assets/a54b942d-acf1-4741-a4fe-37af68bebb2c" />
 <img width="400" height="800" alt="도서 수정" src="https://github.com/user-attachments/assets/de5aa02a-4237-4301-b013-b774462d639b" />
-
-<img width="400" height="300" alt="리뷰 모달" src="https://github.com/user-attachments/assets/1bf6950e-6b14-41b1-b153-dcaf6c32fa2a" />
-<img width="400" height="300" alt="리뷰 수정" src="https://github.com/user-attachments/assets/b4382968-15b7-42b0-84bb-85b207ea9919" />
-
 <img width="800" height="400" alt="리뷰" src="https://github.com/user-attachments/assets/b007591b-96e1-4ffa-84bf-6d8e56bca7dd" />
-
-<img width="400" height="150" alt="다른 사용자 리뷰 수정" src="https://github.com/user-attachments/assets/049512bb-e848-47ca-badf-5159d3639808" />
-<img width="400" height="150" alt="비로그인 리뷰" src="https://github.com/user-attachments/assets/bb6f48b9-c0b5-4e19-944d-70a49d750604" />
 
 
 - [X] **상품의 CRUD**
